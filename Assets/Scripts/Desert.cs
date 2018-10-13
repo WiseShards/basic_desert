@@ -18,7 +18,7 @@ public class Desert : MonoBehaviour {
             for(int j = 0; j < Depth; j++) {
                 float xCoord = (i / (float) Width) * NoiseScale;
                 float yCoord = (j / (float) Depth) * NoiseScale;
-                float y = Height * Mathf.Clamp01(Mathf.PerlinNoise(xCoord, yCoord));
+                float y = Height * Mathf.PerlinNoise(xCoord, yCoord);
 
                 vertices.Add(new Vector3(i - Width * 0.5f, y, j - Depth * 0.5f));
                 uv.Add(new Vector2((float) i / Width, (float) j / Depth));
